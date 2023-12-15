@@ -1,0 +1,48 @@
+<section class="hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="hero__title">
+                Welcome to the
+                <span class="hero__title-color">Food</span> Boutique!
+            </h1>
+            <p class="hero__desc">
+                With Food Boutique, you're not just subscribing to food, you're
+                signing up for a fresher, fitter, and happier you.
+            </p>
+        </div>
+        <div class="hero__image">
+            <picture>
+                <source
+                    media="(min-width: 1304px)"
+                    srcset="
+                        ./images/hero/hero-desktop.jpg    1x,
+                        ./images/hero/hero-desktop@2x.jpg 2x
+                    "
+                />
+                <source
+                    media="(min-width: 768px)"
+                    srcset="
+                        ./images/hero/hero-tab.jpg    1x,
+                        ./images/hero/hero-tab@2x.jpg 2x
+                    "
+                />
+                <source
+                    media="(min-width: 320px)"
+                    srcset="
+                        ./images/hero/hero-mobile.jpg    1x,
+                        ./images/hero/hero-mobile@2x.jpg 2x
+                    "
+                />
+                <img
+                    class="hero__photo"
+                    src="./images/hero/hero-mobile.jpg"
+                    alt="Food Boutique"
+                />
+            </picture>
+            <svg class="hero__label">
+                <use href="#icon-organic"></use>
+            </svg>
+        </div>
+
+    </div>
+</section>

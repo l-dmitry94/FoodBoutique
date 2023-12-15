@@ -1,1 +1,41 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 16px;
+    color: $black;
+    background-color: $grey;
+}
+
+.container {
+    max-width: 375px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Quincy CF";
+    font-size: 18px;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+
+    &__space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: $green;
+        border-radius: 30px;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: $grey;
+    }
+}
