@@ -1,0 +1,38 @@
+.discount {
+    padding: 40px 0 80px;
+    & .products {
+
+        &__list {
+            padding-bottom: 0;
+        }
+
+        &__link {
+            padding: 16px;
+        }
+        &__item-space {
+            margin-bottom: 16px;
+        }
+
+        &__item-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__item-main {
+            align-items: center;
+        }
+
+        &__item-title {
+            margin-bottom: 0;
+        }
+
+        &__item-discount {
+            position: absolute;
+            top: 3px;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
