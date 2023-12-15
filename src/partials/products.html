@@ -1,0 +1,39 @@
+<section class="products">
+    <div class="container">
+        <div class="products__filters">
+            <p class="products__filters-title">Filters:</p>
+            <form class="products__search">
+                <input
+                    class="products__search-input"
+                    type="search"
+                    placeholder="Search for anything"
+                />
+                <button class="products__search-submit" type="submit">
+                    <svg class="products__search-icon">
+                        <use href="#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
+            <ul class="products__filters-list">
+                <li class="products__filters-item">
+                    <select class="products__filter-select">
+                        <option value="categories">Categories</option>
+                    </select>
+                </li>
+                <li class="products__filters-item">
+                    <select class="products__filter-select">
+                        <option value="A to Z">A to Z</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+
+        <div class="products__wrapper">
+            <include src="./partials/all-products.html"></include>
+            <aside class="products__aside">
+                <include src="./partials/popular.html"></include>
+                <include src="./partials/discount.html"></include>
+            </aside>
+        </div>
+    </div>
+</section>

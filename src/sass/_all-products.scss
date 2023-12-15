@@ -1,0 +1,110 @@
+.products {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    &__item {
+        flex-basis: 100%;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        border-radius: 20px;
+        background-color: $white;
+        transition: box-shadow $transition;
+        padding: 20px;
+
+        &:is(:hover, :focus) {
+            box-shadow: 0px 9.1px 16.534px 0px rgba(0, 0, 0, 0.02), 0px 41.6px 46.475px 0px rgba(0, 0, 0, 0.04), 0px 105.3px 124.678px 0px rgba(0, 0, 0, 0.05), 0px 208px 286px 0px rgba(0, 0, 0, 0.07);
+        }
+    }
+
+    &__item-space {
+        border-radius: 10px;
+        background-color: $grey;
+        padding: 19px 0;
+        margin-bottom: 20px;
+    }
+
+    &__item-image {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+    &__item-info {
+        margin-bottom: 40px;
+    }
+
+    &__item-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11;
+        margin-bottom: 10px;
+    }
+
+    &__item-desc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item-element {
+        display: flex;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+
+    &__item-key {
+        color: rgba(1, 1, 1, 0.30);
+    }
+
+    &__item-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__item-price {
+        font-size: 18px;
+        line-height: 1.11;
+    }
+
+    &__item-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 30px;
+        background-color: $green;
+        transition: background-color $transition;
+
+        &:is(:hover, :focus) {
+            background-color: $hover;
+        }
+    }
+
+    &__item-icon {
+        width: 18px;
+        height: 18px;
+        fill: $grey;
+    }
+
+    &__item-check {
+        display: none;
+        fill: transparent;
+        stroke: $grey;
+    }
+    
+    &__aside {
+
+    }
+}
