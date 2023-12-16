@@ -1,12 +1,20 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 :root {
-    font-family: 'Neue Montreal';
     font-weight: 500;
     font-size: 16px;
     color: $black;
     background-color: $grey;
 }
+
+body {
+    font-family: "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Neue Montreal';
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
 
 .container {
     max-width: 375px;

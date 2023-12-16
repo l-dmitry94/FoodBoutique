@@ -1,9 +1,15 @@
 .discount {
-    padding: 40px 0 80px;
+    padding-top: 40px;
     & .products {
 
         &__list {
             padding-bottom: 0;
+        }
+
+        &__item {
+            &:not(:nth-child(-n + 2)) {
+                display: none;
+            }
         }
 
         &__link {
