@@ -6,6 +6,7 @@
                 <input
                     class="products__search-input"
                     type="search"
+                    name="search"
                     placeholder="Search for anything"
                 />
                 <button class="products__search-submit" type="submit">
@@ -16,12 +17,13 @@
             </form>
             <ul class="products__filters-list">
                 <li class="products__filters-item">
-                    <select class="products__filter-select">
-                        <option value="categories">Categories</option>
+                    <select class="products__filter-select" id="categories">
+                        <option data-placeholder="true"></option>
+                        <option value="Show all">Show all</option>
                     </select>
                 </li>
                 <li class="products__filters-item">
-                    <select class="products__filter-select">
+                    <select class="products__filter-select" id="sort">
                         <option value="A to Z">A to Z</option>
                     </select>
                 </li>
