@@ -1,5 +1,5 @@
 import { common } from '../common/common';
-import { checkProducts } from '../helpers/helpers';
+import { addIconProducts } from '../helpers/helpers';
 import { getData, saveData } from '../services/storage';
 
 export function addToCart(event) {
@@ -21,5 +21,5 @@ export function addToCart(event) {
 
     saveData(cartArr, common.CART_KEY);
 
-    checkProducts();
+    addIconProducts();
 }

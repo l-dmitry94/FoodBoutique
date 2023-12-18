@@ -48,15 +48,8 @@ export function createMarkupProducts(arr) {
                     <div class="products__item-main">
                         <span class="products__item-price">$${price}</span>
                         <button class="products__item-button">
-                            <svg class="products__item-icon">
-                                <use
-                                    class="products__item-cart"
-                                    href="#icon-cart"
-                                ></use>
-                                <use
-                                    class="products__item-check"
-                                    href="#icon-check"
-                                ></use>
+                            <svg class="products__item-cart">
+                                <use href="#icon-cart"></use>
                             </svg>
                         </button>
                     </div>
@@ -113,15 +106,8 @@ export function createMarkupPopular(arr) {
                             </ul>
                         </div>
                         <button class="products__item-button">
-                            <svg class="products__item-icon">
-                                <use
-                                    class="products__item-cart"
-                                    href="#icon-cart"
-                                ></use>
-                                <use
-                                    class="products__item-check"
-                                    href="#icon-check"
-                                ></use>
+                            <svg class="products__item-cart">
+                                <use href="#icon-cart"></use>
                             </svg>
                         </button>
                     </a>
@@ -149,15 +135,8 @@ export function createMarkupDiscount(arr) {
                             <div class="products__item-wrapper">
                                 <span class="products__item-price">$${price}</span>
                                 <button class="products__item-button">
-                                    <svg class="products__item-icon">
-                                        <use
-                                            class="products__item-cart"
-                                            href="#icon-cart"
-                                        ></use>
-                                        <use
-                                            class="products__item-check"
-                                            href="#icon-check"
-                                        ></use>
+                                    <svg class="products__item-cart">
+                                        <use href="#icon-cart"></use>
                                     </svg>
                                 </button>
                             </div>
@@ -223,13 +202,91 @@ export function createMarkupModalProduct({
                         <span class="products__item-price">$${price}</span>
                         <button class="products__item-button">
                             Add to
-                            <svg class="products__item-icon">
-                                <use
-                                    class="products__item-cart"
-                                    href="#icon-cart"
-                                ></use>
+                            <svg class="products__item-cart">
+                                <use href="#icon-cart"></use>
                             </svg>
                         </button>
+                    </div>
+                </div>
+            </div>
+    `;
+}
+
+export function createMarkupModalSubscriptionOk(message) {
+    return `
+            <div class="container">
+                <div class="modal subscription">
+                    <button class="modal__close">
+                        <svg class="modal__close-icon">
+                            <use href="#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="subscription__info">
+                        <h2 class="subscription__title">
+                            Thanks for subscribing for
+                            <span class="subscription__title-color">new</span> products
+                        </h2>
+                        <p class="subscription__text">
+                            ${message}
+                        </p>
+                    </div>
+                    <picture>
+                        <source
+                            media="(min-width: 768px)"
+                            srcset="
+                                ${new URL(
+                                    '../../images/footer/modal-tab.png',
+                                    import.meta.url
+                                )}    1x,
+                                ${new URL(
+                                    '../../images/footer/modal-tab@2x.png',
+                                    import.meta.url
+                                )} 2x
+                            "
+                        />
+                        <source
+                            media="(min-width: 320px)"
+                            srcset="
+                            ${new URL(
+                                '../../images/footer/modal-mobile.png',
+                                import.meta.url
+                            )}    1x,
+                            ${new URL(
+                                '../../images/footer/modal-mobile@2x.png',
+                                import.meta.url
+                            )} 2x
+                            "
+                        />
+                        <img
+                            class="subscription__img"
+                            src="${new URL(
+                                '../../images/footer/modal-mobile.png',
+                                import.meta.url
+                            )}"
+                            alt="Thanks for subscribing for new products"
+                        />
+                    </picture>
+                </div>
+            </div>
+    `;
+}
+
+export function createMarkupModalSubscriptionError() {
+    return `
+            <div class="container">
+                <div class="modal subscription subscription-error">
+                    <button class="modal__close">
+                        <svg class="modal__close-icon">
+                            <use href="#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="subscription__info">
+                        <h2 class="subscription__title">
+                            This <span class="subscription__title-color">email address</span> has already been entered     
+                        </h2>
+                        <p class="subscription__text">
+                            You have already subscribed to our new products. Watch for offers at the mailing address.
+                        </p>
                     </div>
                 </div>
             </div>

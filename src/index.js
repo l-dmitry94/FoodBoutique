@@ -8,6 +8,7 @@ import { modalProduct } from './js/products/modalProduct';
 import { renderPopular } from './js/products/popular';
 import { renderProducts } from './js/products/products';
 import { refs } from './js/services/refs';
+import { handleSubscription } from './js/subscription/subscription';
 
 //render
 storageFilters();
@@ -25,5 +26,8 @@ refs.productsWrapper.addEventListener('click', modalProduct);
 
 //add to basket
 refs.productsWrapper.addEventListener('click', addToCart);
+
+//subscription
+refs.subscriptionForm.addEventListener('submit', handleSubscription);
 
 
