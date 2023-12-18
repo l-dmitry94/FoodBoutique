@@ -1,5 +1,5 @@
 import { common } from '../common/common';
-import { checkProducts } from '../helpers/helpers';
+import { addIconProducts, checkProducts } from '../helpers/helpers';
 import { fetchProducts } from '../requests/products';
 import { createMarkupProducts, createMarkupProductsNotFound } from '../services/markup';
 import { refs } from '../services/refs';
@@ -32,7 +32,7 @@ export async function searchByKeyword(event) {
         }
 
         refs.productsList.innerHTML = createMarkupProducts(data.results);
-        checkProducts()
+        addIconProducts()
     } catch (error) {
         console.log(error);
     }

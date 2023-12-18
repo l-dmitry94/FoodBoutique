@@ -91,14 +91,15 @@
         }
     }
 
-    &__item-icon {
+    &__item-cart {
         width: 18px;
         height: 18px;
         fill: $grey;
     }
 
     &__item-check {
-        display: none;
+        width: 18px;
+        height: 18px;
         fill: transparent;
         stroke: $grey;
     }
