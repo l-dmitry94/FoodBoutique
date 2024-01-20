@@ -18,6 +18,7 @@ export async function handleSubscription(event) {
     email = subscription.value.trim();
 
     if (!email.length) {
+        Notify.warning("Please enter your email address");
         return;
     }
 

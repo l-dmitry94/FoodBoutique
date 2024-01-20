@@ -1,0 +1,141 @@
+<section class="cart">
+    <div class="container">
+        <div class="cart__quantity">
+            <span class="cart__quantity-space">
+                <svg class="cart__quantity-icon">
+                    <use href="#icon-cart"></use>
+                </svg>
+            </span>
+            <p class="cart__quantity-counter">
+                Cart (<span class="cart__quantity-counter counter">0</span>)
+            </p>
+        </div>
+        <div class="cart__wrapper">
+            <div class="cart__main">
+                <button class="cart__delete">
+                    Delete all
+                    <svg class="cart__delete-icon">
+                        <use href="#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="products__list" id="cart">
+                    <li class="products__item">
+                        <button class="products__delete">
+                            <svg class="products__delete-icon">
+                                <use href="#icon-close"></use>
+                            </svg>
+                        </button>
+                        <div class="products__item-space">
+                            <img
+                                class="products__item-image"
+                                src="./images/temp/avocado.png"
+                                alt="avocado"
+                            />
+                        </div>
+                        <div class="products__item-info">
+                            <h3 class="products__item-title">Avocado</h3>
+                            <ul class="products__item-desc">
+                                <li class="products__item-element">
+                                    <span class="products__item-key"
+                                        >Category:</span
+                                    >
+                                    <p class="products__item-value">
+                                        Fresh Produce
+                                    </p>
+                                </li>
+                                <li class="products__item-element">
+                                    <span class="products__item-key"
+                                        >Size:</span
+                                    >
+                                    <p class="products__item-value">Each</p>
+                                </li>
+                            </ul>
+                            <div class="products__item-main">
+                                <span class="products__item-price">$1.99</span>
+                                <div class="products__item-quantity">
+                                    <button class="products__item-sign">
+                                        <svg class="products__item-icon">
+                                            <use href="#icon-minus"></use>
+                                        </svg>
+                                    </button>
+                                    <span class="products__item-counter">1</span>
+                                    <button class="products__item-sign">
+                                        <svg class="products__item-icon">
+                                            <use href="#icon-plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <button class="products__delete">
+                            <svg class="products__delete-icon">
+                                <use href="#icon-close"></use>
+                            </svg>
+                        </button>
+                        <div class="products__item-space">
+                            <img
+                                class="products__item-image"
+                                src="./images/temp/avocado.png"
+                                alt="avocado"
+                            />
+                        </div>
+                        <div class="products__item-info">
+                            <h3 class="products__item-title">Avocado</h3>
+                            <ul class="products__item-desc">
+                                <li class="products__item-element">
+                                    <span class="products__item-key"
+                                        >Category:</span
+                                    >
+                                    <p class="products__item-value">
+                                        Fresh Produce
+                                    </p>
+                                </li>
+                                <li class="products__item-element">
+                                    <span class="products__item-key"
+                                        >Size:</span
+                                    >
+                                    <p class="products__item-value">Each</p>
+                                </li>
+                            </ul>
+                            <div class="products__item-main">
+                                <span class="products__item-price">$1.99</span>
+                                <div class="products__item-quantity">
+                                    <button class="products__item-sign">
+                                        <svg class="products__item-icon">
+                                            <use href="#icon-minus"></use>
+                                        </svg>
+                                    </button>
+                                    <span class="products__item-counter">1</span>
+                                    <button class="products__item-sign">
+                                        <svg class="products__item-icon">
+                                            <use href="#icon-plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart__total">
+                <h3 class="cart__total-title">Your Order</h3>
+                <div class="cart__total-info">
+                    <span class="cart__total-text">Total</span>
+                    <div class="cart__total-price">
+                        <span class="cart__total-level">Sum:</span>
+                        $12,94
+                    </div>
+                </div>
+                <form class="cart__form">
+                    <div class="cart__form-wrapper">
+                        <label class="cart__form-label" for="cart-form">Mail:</label>
+                        <input class="cart__form-input" id="cart-form" type="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <button class="cart__form-button" type="submit">Checkout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
