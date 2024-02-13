@@ -1,4 +1,6 @@
+import { common } from '../common/common';
 import { apiProducts } from '../services/api';
+import { getData } from '../services/storage';
 
 export async function fetchCategories() {
     const response = await apiProducts({
@@ -41,9 +43,9 @@ export async function fetchProducts({ keyword, category, page, limit }) {
     }
 
     const response = await apiProducts({
-        method: "GET",
-        url: `?${params}`
-    })
+        method: 'GET',
+        url: `?${params}`,
+    });
 
     return response.data;
 }
@@ -73,4 +75,21 @@ export async function fetchProduct(id) {
     });
 
     return response.data;
+}
+
+export async function fetchAddedProducts() {
+    const cartArr = getData(common.CART_KEY);
+
+    const responses = cartArr.map(async id => {
+        const response = await apiProducts({
+            method: 'GET',
+            url: `/${id}`,
+        });
+
+        return response.data;
+    });
+
+    const promise = await Promise.allSettled(responses)
+
+    return promise
 }
