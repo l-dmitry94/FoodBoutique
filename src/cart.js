@@ -1,3 +1,7 @@
-import { renderAddedProducts } from "./js/cart/cart";
+import { renderAddedProducts } from './js/cart/cart';
+import { deleteFromCart } from './js/cart/deleteFromCart';
+import { refs } from './js/services/refs';
 
-renderAddedProducts()
+renderAddedProducts();
+
+refs.cartProductList.addEventListener('click', deleteFromCart);

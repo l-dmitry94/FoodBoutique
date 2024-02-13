@@ -1,7 +1,12 @@
-import { fetchAddedProducts } from "../requests/products";
+import { fetchAddedProducts } from '../requests/products';
+import { createMarkupAddedProducts } from '../services/markup';
+import { refs } from '../services/refs';
 
 export async function renderAddedProducts() {
-    const data = await fetchAddedProducts();
-    console.log(data)
-
+    try {
+        const data = await fetchAddedProducts();
+        refs.cartProductList.innerHTML = createMarkupAddedProducts(data);
+    } catch (error) {
+        console.log(error.message);
+    }
 }

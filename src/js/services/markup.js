@@ -292,3 +292,59 @@ export function createMarkupModalSubscriptionError() {
             </div>
     `;
 }
+
+export function createMarkupAddedProducts(arr) {
+    return arr.map(
+        ({ value: { _id, img, name, category, price, size } }) => `
+            <li class="products__item" data-id="${_id}">
+                <button class="products__delete">
+                    <svg class="products__delete-icon">
+                        <use href="#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="products__item-space">
+                    <img
+                        class="products__item-image"
+                        src="${img}"
+                        alt="${name}"
+                    />
+                </div>
+                <div class="products__item-info">
+                    <h3 class="products__item-title">${name}</h3>
+                    <ul class="products__item-desc">
+                        <li class="products__item-element">
+                            <span class="products__item-key"
+                                >Category:</span
+                            >
+                            <p class="products__item-value">
+                                ${normalizeCategory(category)}
+                            </p>
+                        </li>
+                        <li class="products__item-element">
+                            <span class="products__item-key"
+                                >Size:</span
+                            >
+                            <p class="products__item-value">${size}</p>
+                        </li>
+                    </ul>
+                    <div class="products__item-main">
+                        <span class="products__item-price">$${price}</span>
+                        <div class="products__item-quantity">
+                            <button class="products__item-sign">
+                                <svg class="products__item-icon">
+                                    <use href="#icon-minus"></use>
+                                </svg>
+                            </button>
+                            <span class="products__item-counter">1</span>
+                            <button class="products__item-sign">
+                                <svg class="products__item-icon">
+                                    <use href="#icon-plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+    `
+    ).join("");
+}

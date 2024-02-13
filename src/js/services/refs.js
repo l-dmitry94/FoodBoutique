@@ -9,5 +9,7 @@ export const refs = {
     productsError: document.querySelector('.error'),
 
     searchForm: document.querySelector('.products__search'),
-    subscriptionForm: document.querySelector('.footer__form')
+    subscriptionForm: document.querySelector('.footer__form'),
+
+    cartProductList: document.querySelector('#cart')
 };
