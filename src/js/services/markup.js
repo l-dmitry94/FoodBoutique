@@ -1,4 +1,6 @@
 import { normalizeCategory, shortSize } from '../helpers/helpers';
+import emptyImage from "../../images/cart/empty.png"
+import emptyImageRetina from "../../images/cart/empty@2x.png"
 
 export function createMarkupCategories(arr) {
     return arr
@@ -294,8 +296,9 @@ export function createMarkupModalSubscriptionError() {
 }
 
 export function createMarkupAddedProducts(arr) {
-    return arr.map(
-        ({ value: { _id, img, name, category, price, size } }) => `
+    return arr
+        .map(
+            ({ value: { _id, img, name, category, price, size } }) => `
             <li class="products__item" data-id="${_id}">
                 <button class="products__delete">
                     <svg class="products__delete-icon">
@@ -346,5 +349,24 @@ export function createMarkupAddedProducts(arr) {
                 </div>
             </li>
     `
-    ).join("");
+        )
+        .join('');
+}
+
+export function createMarkupEmptyCart() {
+    return `
+    <div class="empty">
+        <img class="empty__image" src="${emptyImage}" alt="Empty" 
+            srcset="${emptyImage} 1x, ${emptyImageRetina} 2x">
+        <div class="empty__wrapper">
+            <p class="empty__title">
+                Your basket is <span class="empty__title-color">empty...</span>
+            </p>
+            <p class="empty__descr">
+                Go to the main page to select your favorite products and add them to
+                the cart.
+            </p>
+        </div>
+    </div>
+    `;
 }

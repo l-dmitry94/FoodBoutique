@@ -11,5 +11,7 @@ export const refs = {
     searchForm: document.querySelector('.products__search'),
     subscriptionForm: document.querySelector('.footer__form'),
 
-    cartProductList: document.querySelector('#cart')
+    cartProductList: document.querySelector('#cart'),
+    deleteAllProducts: document.querySelector('.cart__delete'),
+    cartWrapper: document.querySelector('.cart__wrapper'),
 };

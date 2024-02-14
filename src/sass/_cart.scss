@@ -156,8 +156,6 @@
         font-weight: 400;
     }
 
-    &__form {}
-
     &__form-wrapper {
         position: relative;
         margin-bottom: 14px;
@@ -202,5 +200,35 @@
         line-height: 1.29;
         background-color: $green;
         border-radius: 30px;
+    }
+}
+
+.empty {
+    max-width: 279px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    &__image {
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1.11;
+        color: $black;
+        margin-top: 28px;
+        margin-bottom: 14px;
+    }
+
+    &__title-color {
+        color: $green;
+    }
+
+    &__descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.29;
+        color: rgba(1, 1, 1, 0.7);
     }
 }

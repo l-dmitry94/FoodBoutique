@@ -1,4 +1,6 @@
 import { common } from "../common/common";
+import { createMarkupEmptyCart } from "../services/markup";
+import { refs } from "../services/refs";
 import { getData, saveData } from "../services/storage";
 import { renderAddedProducts } from "./cart";
 
@@ -20,7 +22,7 @@ export async function deleteFromCart(event) {
     renderAddedProducts();
 
     if(!cartArr.length) {
-        // refs.cardWrapper.innerHTML = createMarkupEmptyCart();
+        refs.cartWrapper.innerHTML = createMarkupEmptyCart();
         localStorage.removeItem(common.CART_KEY)
     }
 } 
